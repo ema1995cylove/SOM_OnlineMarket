@@ -889,17 +889,17 @@ $("#btn_Start").click(function(){
 $("#file1").change(function(){
     var fileinfo=document.getElementById("file1");
     var list=document.getElementById("imglist1");
-    pic_change(fileinfo,list)
+    pic_change(fileinfo,list);
 });
 $("#file2").change(function(){
     var fileinfo=document.getElementById("file2");
     var list=document.getElementById("imglist2");
-    pic_change(fileinfo,list)
+    pic_change(fileinfo,list);
 });
 $("#file3").change(function(){
     var fileinfo=document.getElementById("file3");
     var list=document.getElementById("imglist3");
-    pic_change(fileinfo,list)
+    pic_change(fileinfo,list);
 });
 $("#file4").change(function(){
     var fileinfo=document.getElementById("file4");
@@ -918,6 +918,8 @@ function pic_change(file,list){
 $(".sure_a4").click(function(){
     var j=1;
     var jason="";
+    var first_class_id=$("#four_fi option:selected").val();
+    var second_class_id=$("#four_se option:selected").val();
     var commodity_count=$("#add_good_num").val();
     var commodity_name=$("#add_good_n").val();
     var commodity_price=$("#add_good_price").val();
@@ -983,7 +985,9 @@ $(".sure_a4").click(function(){
         return;
     }
     jason={
-    	"market_id":market_data.market.market_id,
+        "market_id":market_data.market.market_id,
+        "first_class_id":first_class_id,
+        "second_class_id": second_class_id,
         "commodity_brand":commodity_brand,
         "commodity_count":commodity_count,
         "commodity_name":commodity_name,
@@ -991,10 +995,11 @@ $(".sure_a4").click(function(){
         "commodity_specifications":commodity_specifications,
         "commodity_vip_price":commodity_vip_price,
         "commodity_picture":commodity_picture0,
-        "commodity_picture":commodity_picture1,
-        "commodity_picture":commodity_picture2,
-        "commodity_picture":commodity_picture3
+        "commodity_picture1":commodity_picture1,
+        "commodity_picture2":commodity_picture2,
+        "commodity_picture3":commodity_picture3
     };
+    alert("start upload");
     $.ajax({
         type : "post",
         url : "/som/mbia/marketCommoditySave.do",

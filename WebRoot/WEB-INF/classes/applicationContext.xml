@@ -32,12 +32,15 @@
 	</bean>
 
 	<tx:annotation-driven />
-	
-	<bean id="ViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+	<bean id="ViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp" />
-		
 	</bean>
-	
-	<mvc:annotation-driven/>
+	<!-- 文件上传处理器 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+
+	<mvc:annotation-driven />
 </beans>

@@ -16,6 +16,8 @@ import net.sf.json.JsonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.som.adapter.JsonValueProcessorImpl;
 import com.som.model.MarketBasicInformation;
@@ -155,12 +157,14 @@ public class MarketBasicInformationAction {
 	@RequestMapping("marketCommoditySave")
 	public void marketCommoditySave(int market_id, int first_class_id,
 			int second_class_id, MarketCommodity mc,
-			HttpServletResponse response, File[] commodity_picture)
+			HttpServletResponse response,
+			@RequestParam CommonsMultipartFile commodity_picture)
 			throws IOException {// TODO
 
-		System.out.println("markettest"+market_id);
+		System.out.println("markettest" + market_id);
 		System.out.println(mc);
-		System.out.println(commodity_picture.length);
+		System.out.println(commodity_picture.getName());
+		System.out.println(commodity_picture.getSize());
 
 		// 为了保证信息的正确，还是要一个超市的ID进行保证，以及一个大类ID,小类ID加以验证
 		// 查出超市，再查出超市的大类信息，再查出对应的小类信息，以及商品信息，验证是否存在对应的商品
