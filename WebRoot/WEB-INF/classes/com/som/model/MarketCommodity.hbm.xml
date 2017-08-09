@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.som.model.MarketCommodity" table="som_market_commodity"
+		catalog="som">
+		<id name="commodity_id">
+			<column name="commodity_id"></column>
+			<generator class="native"></generator>
+		</id>
+
+		<many-to-one name="commodity_market" class="com.som.model.MarketBasicInformation"
+			fetch="select" lazy="false">
+			<column name="commodity_market_id" not-null="true"></column>
+		</many-to-one>
+
+		<many-to-one name="commodity_first_class" class="com.som.model.MarketFirstClass"
+			column="commodity_first_class_id" unique="true" lazy="false"></many-to-one>
+		<many-to-one name="commodity_second_class" class="com.som.model.MarketSecondClass"
+			column="commodity_second_class_id" unique="true" lazy="false"></many-to-one>
+
+		<property name="commodity_picture0" column="commodity_picture_0"></property>
+		<property name="commodity_picture1" column="commodity_picture_1"></property>
+		<property name="commodity_picture2" column="commodity_picture_2"></property>
+		<property name="commodity_picture3" column="commodity_picture_3"></property>
+		<property name="commodity_name" column="commodity_name"></property>
+		<property name="commodity_count" column="commodity_count"></property>
+		<property name="commodity_brand" column="commodity_brand"></property>
+		<property name="commodity_price" column="commodity_price"></property>
+		<property name="commodity_vip_price" column="commodity_vip_price"></property>
+		<property name="commodity_specifications" column="commodity_specifications"></property>
+
+	</class>
+</hibernate-mapping>

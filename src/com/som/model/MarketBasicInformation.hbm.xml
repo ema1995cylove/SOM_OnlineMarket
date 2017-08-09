@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.som.model.MarketBasicInformation" table="som_market_basic_information"
+		catalog="som">
+		<id name="market_id">
+			<column name="market_id"></column>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="market_name" column="market_name"></property>
+		<property name="market_logo" column="market_logo"></property>
+
+		<many-to-one name="market_user" column="market_user_id"
+			lazy="false" unique="true" class="com.som.model.UserAccount"></many-to-one>
+
+		<many-to-one name="market_address" column="market_address_id"
+			lazy="false" unique="true" class="com.som.model.LinkMarketAddress"></many-to-one>
+
+		<set name="market_first" inverse="false" lazy="false"
+			table="som_link_market_class" cascade="all">
+			<key column="market_id"></key>
+			<many-to-many column="first_class_id" class="com.som.model.MarketFirstClass"></many-to-many>
+		</set>
+
+		<set name="vipUser" table="som_link_market_user" inverse="false" lazy="false">
+			<key column="market_id"></key>
+			<many-to-many column="user_id" class="com.som.model.UserAccount"></many-to-many>
+		</set>
+
+		<set name="market_commodity" cascade="all" lazy="false">
+			<key column="commodity_market_id"></key>
+			<one-to-many class="com.som.model.MarketCommodity" />
+		</set>
+
+		<set name="market_userOrders" cascade="all" lazy="false">
+			<key column="order_market_id"></key>
+			<one-to-many class="com.som.model.UserOrder" />
+		</set>
+	</class>
+</hibernate-mapping>

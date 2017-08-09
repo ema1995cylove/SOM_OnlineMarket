@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.som.model.LinkUserAddress" table="som_link_user_address">
+		<id name="id" column="id" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="user_detailAddress" column="detailed"></property>
+
+		<many-to-one name="address_userAccount" class="com.som.model.UserAccount"
+			lazy="false" column="user_id"></many-to-one>
+
+		<many-to-one name="user_province" class="com.som.model.AddressProvince"
+			lazy="false" column="province_id" cascade="all" unique="true" />
+		<many-to-one name="user_contry" class="com.som.model.AddressContry"
+			lazy="false" column="contry_id" unique="true" />
+		<many-to-one name="user_city" class="com.som.model.AddressCity"
+			lazy="false" column="city_id" unique="true"></many-to-one>
+	</class>
+</hibernate-mapping>

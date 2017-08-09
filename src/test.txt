@@ -1,0 +1,78 @@
+
+//基本信息页面
+{"user":"{"accountId":1,
+	"accountNumber":"15619252163",
+	"accountPower":1,
+	"userBirthday":null,
+	"userLogo":"",
+	"userName":"","userSex":""}",
+"market":{"market_address":{
+	"marketAddress_city":{"city_id":2,"city_name":"wj1ia"},
+	"marketAddress_contry":{"contry_id":1,"contry_name":"xia1n"},
+	"marketAddress_detailed":"wojia","marketAddress_id":1,
+	"marketAddress_province":{"province_id":13,"province_name":"hello"}},
+
+"market_id":1,"market_logo":"thisislogo","market_name":"chaoshi"}}
+
+//大类查询添加页面，数据看清楚，最后有个marketid
+{"market_first":[
+{"first_class_id":4,"first_class_name":"hjisoeg"},
+{"first_class_id":3,"first_class_name":"hjisoeg"},
+{"first_class_id":2,"first_class_name":"hjwoiehgo"},
+{"first_class_id":1,"first_class_name":"hjisoeg"}],"market_id":2}
+//根据发送的大类ID获取的小类数组+大类信息
+
+{"first_class_id":2,"first_class_name":"hjwoiehgo",
+"secondClasses":[
+	{"second_class_id":3,"second_class_name":"hello1"},
+	{"second_class_id":2,"second_class_name":"hello1"}]}
+
+{"first_class_id":2,"first_class_name":"hjwoiehgo",
+"secondClasses":[{"second_class_id":3,"second_class_name":"hello1"},
+{"second_class_id":2,"second_class_name":"hello1"}]}
+//根据小类ID查询到的商品数组
+[{"commodity_brand":"品牌","commodity_count":20,"commodity_id":1,"commodity_name":"吃的","commodity_picture0":"/SOM/som/load/images/1.jpg","commodity_picture1":"tupian2","commodity_picture2":"tupian3","commodity_picture3":"tupian4","commodity_price":100,"commodity_specifications":"","commodity_vip_price":0},{"commodity_brand":"竞拍","commodity_count":100,"commodity_id":2,"commodity_name":"用的","commodity_picture0":"/SOM/som/load/images/timg.jpg","commodity_picture1":"","commodity_picture2":"","commodity_picture3":"","commodity_price":12,"commodity_specifications":"","commodity_vip_price":8}]
+//根据超市ID查询到的订单信息---这里只有一个
+[{"oderId":1,
+"orderCode":"11115555666",
+"orderDate":{"date":21,
+	"day":5,"hours":0,
+	"minutes":0,"month":3,
+	"nanos":0,"seconds":0,
+	"time":1492704000000,
+	"timezoneOffset":-480,
+	"year":117},
+"orderDetailed":[
+	{"id":1,
+	"orderCommodity":{
+		"commodity_brand":"品牌",
+		"commodity_count":20,
+		"commodity_id":1,
+		"commodity_name":"吃的",
+		"commodity_picture0":"/SOM/som/load/images/1.jpg",
+		"commodity_price":100,
+		"commodity_specifications":"",
+		"commodity_vip_price":0},
+		"orderCommodityCount":29}],
+		"user":{"accountId":1,"accountNumber":"15619252163","userName":""}}]
+//根据超市ID查到的VIP用户
+[{"market_id":1,"vipUser":[{"accountId":1,"accountNumber":"15619252163","userBirthday":null,"userLogo":"","userName":""},{"accountId":3,"accountNumber":"15619252161","userBirthday":null,"userLogo":"","userName":""},{"accountId":2,"accountNumber":"15619252162","userBirthday":null,"userLogo":"","userName":""}]}]
+
+请求所有的省
+url:"http://localhost:8080/som/home/markets.do",
+{"province":[
+	{"province_id":1,"province_name":"?北京"},
+	{"province_id":2,"province_name":"上海"},
+	{"province_id":3,"province_name":"天津"},
+	{"province_id":4,"province_name":"重庆"},
+	{"province_id":5,"province_name":"黑龙江"},
+	{"province_id":6,"province_name":"吉林"},
+	{"province_id":7,"province_name":"辽宁"},{"province_id":8,"province_name":"山东"},{"province_id":9,"province_name":"山西"},{"province_id":10,"province_name":"陕西"},{"province_id":11,"province_name":"河北"},{"province_id":12,"province_name":"河南"},{"province_id":13,"province_name":"湖北"},{"province_id":14,"province_name":"湖南"},{"province_id":15,"province_name":"海南"},{"province_id":16,"province_name":"江苏"},{"province_id":17,"province_name":"江西"},{"province_id":18,"province_name":"广东"},{"province_id":19,"province_name":"广西"},{"province_id":20,"province_name":"云南"},{"province_id":21,"province_name":"贵州"},{"province_id":22,"province_name":"四川"},{"province_id":23,"province_name":"内蒙古"},{"province_id":24,"province_name":"宁夏"},{"province_id":25,"province_name":"甘肃"},{"province_id":26,"province_name":"青海"},{"province_id":27,"province_name":"西藏"},{"province_id":28,"province_name":"新疆"},{"province_id":29,"province_name":"安徽"},{"province_id":30,"province_name":"浙江"},{"province_id":31,"province_name":"福建"},{"province_id":32,"province_name":"台湾"},{"province_id":33,"province_name":"香港"},{"province_id":34,"province_name":"澳门"}],"class":"province"}
+
+选择省之后，市的URL以及返回数据
+url :"http://localhost:8080/som/home/countries.do",
+{"class":"city","cities":[{"city_id":3,"city_name":"天津"}]}
+
+选择市之后，区的URL以及返回数据
+url :"http://localhost:8080/som/home/markets.do",
+{"contries":[{"contry_id":1,"contry_name":"朝阳区"}],"class":"contries"}

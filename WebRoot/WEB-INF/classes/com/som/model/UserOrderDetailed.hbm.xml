@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="com.som.model.UserOrderDetailed" table="som_user_order_detailed"
+		catalog="som">
+		<id name="id">
+			<column name="id"></column>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="orderCommodityCount" column="order_commodity_count"></property>
+		<many-to-one name="order" column="order_id"
+			class="com.som.model.UserOrder"></many-to-one>
+
+		<many-to-one name="orderCommodity" column="order_commodity_id"
+			unique="true" class="com.som.model.MarketCommodity"></many-to-one>
+
+	</class>
+</hibernate-mapping>

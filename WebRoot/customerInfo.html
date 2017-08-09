@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./som/customerInfo/css/cssReset.css"/>
+    <link rel="stylesheet" type="text/css" href="./som/customerInfo/css/headTail.css"/>
+    <link rel="stylesheet" href="./som/customerInfo/css/customerInfo.css">
+    <script src="./som/customerInfo/frames/jquery_min.js"></script>
+    <script src="./som/customerInfo/js/gVerify.js"></script>
+    <script src="./som/customerInfo/js/customerInfo.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function($) {
+        var baseData = {"userName" : "猫咪老师",
+                        "accountNumber" : "15112341234",
+                        "userSex" : "n",
+                        "userBirthday" : "1996-08-03",
+        };
+
+
+
+        var addressData = [ 
+        {"province":{
+            "province_id" : "1",
+            "province_name" : "陕西省"},
+        "city" :{
+            "city_name" : "西安市",
+            "city_id" : "11"
+         },
+        "contry":{
+            "contry_name": "长安区",
+            "contry_id" : "111"
+        },
+        "detailAddress":"西安邮电大学长安校区西区",
+        "id" : "1"},
+        {"province":{
+            "province_id" : "2",
+            "province_name" : "浙江省"},
+        "city" :{
+            "city_name" : "杭州市",
+            "city_id" : "12"
+         },
+        "contry":{
+            "contry_name": "新城区",
+            "contry_id" : "112"
+        },
+        "detailAddress":"浙江大学长安校区西区",
+        "id" : "2"},
+        {"province":{
+            "province_id" : "1",
+            "province_name" : "陕西省"},
+        "city" :{
+            "city_name" : "西安市",
+            "city_id" : "11"
+         },
+        "contry":{
+            "contry_name": "长安区",
+            "contry_id" : "111"
+        },
+        "detailAddress":"西安邮电大学长安校区西区",
+        "id":"3"} 
+        ];
+        var orderInfo = [{"oderId":1,
+        "orderCode":"121212121",
+        "orderDetailed":
+            [{"orderCommodityCount":3,
+            "orderCommodity":
+                {"commodity_picture0":"/som/commodityInfo/images/02bigbig.jpg",
+                "commodity_price":30,
+                "commodity_brand":"银桥",
+                "commodity_vip_price":12,
+                "commodity_name":"银桥小木屋"}}],
+        "orderDate":"2017-05-04"},
+        {"oderId":1,
+        "orderCode":"121212121",
+        "orderDetailed":
+            [{"orderCommodityCount":3,
+            "orderCommodity":
+                {"commodity_picture0":"/som/commodityInfo/images/02bigbig.jpg",
+                "commodity_price":40,
+                "commodity_brand":"银桥",
+                "commodity_vip_price":12,
+                "commodity_name":"银桥mm小木屋"}},{"orderCommodityCount":3,
+            "orderCommodity":
+                {"commodity_picture0":"/som/commodityInfo/images/02bigbig.jpg",
+                "commodity_price":40,
+                "commodity_brand":"银桥",
+                "commodity_vip_price":12,
+                "commodity_name":"银桥mm小木屋"}},{"orderCommodityCount":3,
+            "orderCommodity":
+                {"commodity_picture0":"/som/commodityInfo/images/02bigbig.jpg",
+                "commodity_price":40,
+                "commodity_brand":"银桥",
+                "commodity_vip_price":12,
+                "commodity_name":"银桥mm小木屋"}}],
+        "orderDate":"2017-05-04"},
+        {"oderId":1,
+        "orderCode":"121212121",
+        "orderDetailed":
+            [{"orderCommodityCount":3,
+            "orderCommodity":
+                {"commodity_picture0":"/som/commodityInfo/images/02bigbig.jpg",
+                "commodity_price":70,
+                "commodity_brand":"银桥",
+                "commodity_vip_price":12,
+                "commodity_name":"银桥yy小木屋"}}],
+        "orderDate":"2017-05-04"}];
+        // $("#province option:not(:first)").remove();
+        initBaseInfo();
+        init();
+        
+        //initBaseData(baseData);
+        //initBaseInfo();
+        //initAddressData(addressData);
+        // changeAddress();
+        // deleteAddress();
+
+        /* var verifyCode = new GVerify("v_container");
+        selectOtherOrder();
+        deleteOrder();
+        $("input:password").on('blur', function(event) {
+            var len = $(this).val().length;
+            var newPassword = $("#newPassword").val();
+            var repeatPassword = $("#repeatPassword").val();
+            var len = $(this).val().length;
+            if(len < 6){
+                $(this).siblings('.minPassword').show();
+                $(this).siblings('.maxPassword').hide();
+            }else if(len > 20){
+                $(this).siblings('.maxPassword').show();
+                $(this).siblings('.minPassword').hide();
+            }else{
+                $(this).siblings('.minPassword').hide();
+                $(this).siblings('.maxPassword').hide();
+                 if(!repeatPassword){
+                    $("#differentPassword").hide();
+                }else  if(!(newPassword == repeatPassword))
+                    $("#differentPassword").show(); 
+                else
+                    $("#differentPassword").hide(); 
+                }
+        });
+        $("#newPassword").on('blur', function(event) {
+            $("#tipPassword").hide();
+        });
+        initAddress(); */
+
+
+    
+        // $("#changePasswordButton").on("click", function(){
+        //     var res = verifyCode.validate(document.getElementById("code_input").value);
+        //     var oldPassword = $("#oldPassword").val();
+        //     var newPassword = $("#newPassword").val();
+        //     var repeatPassword = $("#repeatPassword").val();
+           
+
+        //     if(res){
+        //         alert("验证正确");
+        //     }else{
+        //         alert("验证码错误");
+        //     }
+        // });
+             
+    });
+    
+  
+
+ 
+    
+    </script>
+    
+</head>
+<body>
+<div class="headList">
+    <div class="headLeft">
+        <p>您现在已进入</p><a href="#">****超市</a>
+        <a class="shift" href="#">[切换]</a>
+        <div class="shopMenu">
+            ******
+        </div>
+    </div>
+    <div class="headRight">
+        <a href="#" class="live">登&nbsp;录/注&nbsp;册</a>
+        <a href="#">首页</a>
+        <a href="#">个人中心</a>
+        <a href="#">购物车</a>
+    </div>
+</div>
+<div class="topLine">
+    <img class="stationLogo" />
+    <div class="search">
+        <form>
+            <label for="good"/>
+            <input type="text" id="good" class="searchBlock" placeholder="商品搜索"/>
+            <input type="button" class="searchButton">
+        </form>
+    </div>
+</div>
+<div class="nav">
+<img src="./som/customerInfo/images/nav.png" width="100%">
+</div>
+<div class="main">
+    <div class="myContent"><!--myContent-->
+    <div class="leftTab">
+        <div class="info"><li class="baseInfo"></li>基本信息</div>
+        <div class="info"><li class="icon address"></li>收货地址</div>
+        <div class="info"><li class="icon order"></li>我的订单</div>
+        <div class="info"><li class="icon passwordIcon"></li>修改密码</div>
+        <div class="info"><li class="icon  vip"></li>我的会员</div>
+    </div>
+    <div class="rightTab">
+        <div class="infoHead"></div>
+        <div class="myInfo" id="baseInfo">
+            <div class="header">
+                <img src="./som/customerInfo/images/header.png">
+                <input type="file" id="btn_file" style="display:none;">
+                <div class="button changeHeader"></div>
+                <div class="button selectFile"></div>
+                <div class="button upload"></div>
+            </div>
+            <div class="base">
+                <div class="name"><li class="baseLi">昵称:</li> 
+                    <input type="text" id="userName" value="" disabled="true">
+                    <li id="modify" class="modity">修改</li>
+                </div>
+                <div class="phone"><li class="baseLi">手机号:</li>  
+                    <input type="text" id="tel" disabled="true">
+                </div>
+                <div id ="sex">
+                    <li class="baseLi">性别:</li>
+                    <input type="radio" name="sex" value="m">男
+                    <input type="radio" name="sex" value="f">女
+                    <input type="radio" name="sex" value="n">不告诉你
+                </div>
+                <div class="birth">
+                    <li class="baseLi">生日:</li>
+                    年<select id ="year"></select>
+                    月<select id ="month"></select>
+                    日<select id="day"></select>
+                </div>
+            </div>
+            <div class="tail">
+                <div class="button submit" id="submitInfo"></div>
+                <div class="button cancle" id="cancleInfo"></div>
+            </div>
+        </div>
+        <div class="myInfo" id="checkAddress">
+            <div class="save" id="changeAddress">
+                <span>修改收货地址</span>
+                <div><li class="divLi"><ul class="important">* </ul>收件人姓名:</li><input type="text" id="addressName" disabled="true"></div>
+                <div id="receive">
+                    <li class="divLi"><ul class="important">* </ul>收货地址:</li>
+                    <select id="province"><option value="-1">省/直辖市</option>
+                    </select>
+                    <select id="city"><option value="-1">市</option>
+                    </select>
+                    <select id="contries"><option value="-1">区/县</option>
+                    </select>
+                </div>
+                <div><li class="divLi">邮政编码:</li><input type="text" id="post"></div>
+                <div><li class="divLi"><ul class="important">* </ul>详细地址:</li><textarea name="" id="detailAddress"></textarea></div>
+                <div><li class="divLi"><ul class="important">* </ul>
+                联系方式:</li><input type="text" id="telephone" disabled="true"></div>
+                <div class="saveButton" id = "1111"></div>
+            </div>
+            <div class="save">
+                <span>已保存的收货地址</span>
+                <div class="tip">最多保存10个有效地址,您已保存 <li>5</li> 个</div>
+                <table class="saveAddress">
+                    <thead>
+                        <tr>
+                            <td width="10%">收件人</td>
+                            <td width="46%">收货地址</td>
+                            <td width="11%">邮编</td>
+                            <td width="20%">联系方式</td>
+                            <td width="13%">编辑</td>
+                        </tr>
+                    </thead>
+                    <tbody id="myAddress">
+                    </tbody>
+                    
+                </table>
+                <div class="addressButton" id="addressUp">上页</div>
+                <div class="addressButton" id="addressDown">下页</div>
+            </div>
+        </div>
+        <div class="myInfo" id="checkOrder">
+            <table class="filter">
+                <tr>
+                    <td id="allOrder" value = "100">全部订单</td>
+                    <td id="unPayOrder" value = "1">等待付款</td>
+                    <td id="payOrder" value = "2">已付款</td>
+                    <td id="completeOrder" value = "0">交易完成</td>
+                </tr>
+            </table>
+            <div id="box"> 
+            <table class="orderInfo">
+                <tr>
+                    <th id="orderInformation" width="33%">商品详情
+                    </th>
+                    <th id="num" width="12%">单价</th>
+                    <th id="price" width="12%">数量</th>
+                    <th id="commodity" width="18%">实付款</th>
+                    <th id="stateOrder" width="18%">订单状态</th>
+                    <th id="stateOrder" width="8%">操作</th>
+                </tr>
+                <tbody id="orderTable"></tbody>
+            </table>
+            </div>
+        </div>
+        <div class="myInfo" id="changePassword" >
+            <div><li class="divLi"><ul class="important">* </ul>原密码:</li>
+            <input type="password" id = "oldPassword">
+            </div>
+            <div><li class="divLi"><ul class="important">* </ul>新密码:</li>
+            <input type="password" id = "newPassword">
+            <ul class="important" id = "tipPassword"> 6-20位字母、数字组成 </ul>
+            <ul class="important minPassword" style = "display: none"> 密码不能少于6位！ </ul>
+            <ul class="important maxPassword" style = "display: none"> 密码不能大于20位！ </ul>
+            </div>
+            <div><li class="divLi"><ul class="important">* </ul>重复新密码:</li>
+            <input type="password" id = "repeatPassword">
+            <ul class="important" id = "differentPassword" style = "display: none"> 两次输入的密码不一致，请重新输入 </ul>
+            <ul class="important minPassword" style = "display: none"> 密码不能少于6位！ </ul>
+            <ul class="important maxPassword" style = "display: none"> 密码不能大于20位！ </ul>
+            </div>
+            <div>
+                <li class="divLi"><ul class="important">* </ul>验证码:</li>
+                <input type="text" id="code_input" value="" placeholder="请输入验证码"/>
+                <div class="changeProve" id="v_container" style="width:130px;height:40px;"></div>
+            </div>
+            <div id="changePasswordButton"></div>
+        </div>
+        <div class="myInfo" id="myVip">我的会员</div>
+    </div>
+    
+
+    </div><!--myContent-->
+</div>
+<div class="bottomLine">
+    项目小组：陈垚，曹腾飞，李建刚，武博文，吕思宇，王萌，高子婧
+</div>
+   
+</body>
+</html>

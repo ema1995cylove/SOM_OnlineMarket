@@ -1,0 +1,72 @@
+/**{margin: 0;padding: 0;}*/
+body{ font-family:"ËÎÌו";}
+.headList{width: 100%;height: 55px;background: gainsboro; }
+a{text-decoration: none;color: gray;float: left;}
+.headList a:hover{color: #c81522;}
+.headLeft{
+    line-height: 55px;
+    float: left;
+    font-size: 14px;
+    margin-left: 10%;
+    position: relative;
+    z-index: 999;
+}
+.headLeft p{float: left;color: grey;}
+.headLeft a{margin-left: 10px;}
+.headRight{float: left;  line-height: 55px;  font-size: 14px;  margin-left: 37%;}
+.headRight a{margin-left: 20px;}
+.live{color:#f10215;}
+
+
+/*.topLine{width: 85%;margin: auto;height: 150px;}*/
+.stationLogo{
+    width: 100px;
+    height: 55px;
+    background: lightsteelblue;
+    margin-left:20px;
+    float: left;}
+/*.search{*/
+    /*position: relative;*/
+    /*top: 10px;*/
+    /*left:50px;*/
+    /*margin-left:7%;*/
+    /*margin-top:40px;*/
+    /*float: left;*/
+/*}*/
+/*.searchBlock{*/
+    /*float: left;*/
+    /*width: 500px;*/
+    /*height: 29px;*/
+    /*padding: 3px;*/
+    /*border: solid 3px #f10215;*/
+/*}*/
+/*.searchButton{*/
+    /*margin-left: -10px;*/
+    /*width:60px;*/
+    /*height: 41px;*/
+    /*background: url("../images/search1.png");*/
+    /*border: solid 1px #f10215;*/
+/*}*/
+
+.bottomLine{
+    width: 100%;
+    height: 150px;
+    clear: both;
+    /*background:gainsboro;*/
+    line-height: 150px;
+    text-align: center;
+    font-size: 15px;
+    color:#fff;
+    background:url("../images/paint.png") repeat,gainsboro;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation-name: bottomLine-animation;
+    -webkit-animation-duration: 40s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transition: color .6s linear;
+}
+@-webkit-keyframes bottomLine-animation {
+    0% {background-position: left bottom;}
+    100% {background-position: right bottom;}
+}

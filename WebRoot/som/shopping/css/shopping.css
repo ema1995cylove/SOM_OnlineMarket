@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mid{
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.mid_bottom{
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.first_line{
+    width: 100%;
+    height: 50px;
+
+}
+.first_line td{
+    border: 1px solid #DCDCDC;
+    text-align: center;
+}
+.line{
+    width: 12%;
+}
+.common_line{
+    width: 100%;
+    height: 100px;
+}
+.market_name{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.s_name{
+    width:17%;
+    margin-top: 40px;
+    margin-left: 1%;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.common_line td{
+    border: 1px solid #DCDCDC;
+    text-align: center;
+}
+.line_pic{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-left: 5%;
+}
+.line_pic img{
+	width:100%;
+	height:100%;
+}
+.line_a{
+    height: 80px;
+    width: 40%;
+    float: left;
+}
+.line_a a{
+    font-size: 13px;
+    color: black;
+    line-height: 15px;
+    text-decoration: none;
+}
+.line_a a:hover {
+    color: #F10215;
+    text-decoration: solid ;
+}
+.price{
+    width: 60%;
+    text-align: left;
+    float: left;
+    height: 15px;
+}
+.subtract{
+    border-style: none;
+    outline: none;
+    width: 25%;
+    height: 26px;
+    line-height: 26px;
+    float: left;
+    border-right: 1px solid rgba(128, 128, 128, 0.58);
+}
+.add{
+    border-style: none;
+    outline: none;
+    width: 25%;
+    line-height: 26px;
+    height: 26px;
+    float: right;
+    border-left: 1px solid rgba(128, 128, 128, 0.58);
+}
+.num{
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    height: 25px;
+    float: left;
+    line-height: 25px;
+    border-style:none ;
+}
+.num_all{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.58);
+}
+.total_price{
+    width: 60%;
+    text-align: left;
+    float: left;
+    height: 15px;
+}
+.del_btn{
+    width: 30%;
+    height: 26px;
+    border: 1px solid rgba(128, 128, 128, 0.58);
+}
+.mid_last{
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+}
+.last_l{
+    margin-left: 8%;
+    width: 40%;
+    float: left;
+    height:40px;
+    line-height: 40px;
+}
+.last_r{
+    width: 50%;
+    float: left;
+    height:40px;
+}
+.pay{
+    float: right;
+    margin-right: 5%;
+    height:40px;
+    width: 100px;
+    color: white;
+    border-radius:13% ;
+    outline: none;
+    background-color: #F10215;
+    font-size: 15px;
+    font-weight: bold;
+}
+.amount{
+    width: 20%;
+    margin-left: 3%;
+}
+.market_line{
+    height: 25px;
+    line-height: 25px;
+}
+.market_line td{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 3%;
+}
+.tab{
+    width: 100%;
+    margin-top: 10px;
+}
+.check_box{
+    width: 6%;
+}
+.money{
+    float: left;
+    margin-left: 15%;
+}
+.amount_label{
+    font-weight: bold;
+    font-size: 15px
+}

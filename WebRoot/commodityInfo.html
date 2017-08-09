@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../som/commodityInfo/css/cssReset.css"/>
+    <link rel="stylesheet" type="text/css" href="../som/commodityInfo/css/headTail.css"/>
+    <link rel="stylesheet" type="text/css" href="../som/commodityInfo/css/commodityInfoCss.css"/>
+    <script src="../som/commodityInfo/frames/jquery_min.js"></script>
+    <script src="../som/commodityInfo/js/commodityInfo.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function($) {
+        var info = {
+        "bigbigPath":["./som/commodityInfo/images/01bigbig.jpg" , 
+        "./som/commodityInfo/images/02bigbig.jpg",
+        "./som/commodityInfo/images/03bigbig.jpg",
+        "./som/commodityInfo/images/04bigbig.jpg"],
+        "commodity_market_name":"som超市",
+        "commodity_name":"伊利纯牛奶",
+        "commodity_count":"10000",
+        "commodity_brand":"伊利",
+        "commodity_price":"60",
+        "commodity_vip_price":"55.00",
+        "commodity_specifications":"箱"
+        }
+        //creatNewInfo(info);
+        //init();
+        ajaxInit(2); 
+        slider();
+             
+    });
+    </script>
+</head>
+<body>
+<div class="headList">
+    <div class="headLeft">
+        <p>您现在已进入</p><a href="#">****超市</a>
+        <a class="shift" href="#">[切换]</a>
+        <div class="shopMenu">
+            ******
+        </div>
+    </div>
+    <div class="headRight">
+        <a href="#" class="live">登&nbsp;录/注&nbsp;册</a>
+        <a href="#">首页</a>
+        <a href="#">个人中心</a>
+        <a href="#">购物车</a>
+    </div>
+</div>
+
+<div class="topLine">
+    <img class="stationLogo" />
+    <div class="search">
+        <form>
+            <label for="good"/>
+            <input type="text" id="good" class="searchBlock" placeholder="商品搜索"/>
+            <input type="button" class="searchButton">
+        </form>
+    </div>
+</div>
+<div>
+    <div class="mainMiddle"><!--- 商品详情-->
+        <div class="imgInfo">
+            <div class="bigImgInfo" id ="bigImg">
+            </div>
+            <div class="bigbigImg" id="bigbigImg">
+            </div>
+            <div class="small">
+                <div class="smallImgInfo" id = "pic1">
+                    
+                </div>
+                <div class="smallImgInfo" id = "pic2">
+                    
+                </div>
+                <div class="smallImgInfo" id = "pic3">
+                    
+                </div>
+                <div class="smallImgInfo" id = "pic4">
+                </div>
+            </div>
+        </div>
+        <div class="textInfo">
+            <div class="headInfo">
+                <div class="marketName" id="marketName"></div>
+                <div class="commodityName" id="commodityName"></div>
+            </div>
+            <div class="fixed">
+                    <div class="info">品牌</div> 
+                    <div class="info">规格</div>
+                    <div class="info">库存量</div>
+                    <div class="info">数量</div>
+                    <div class="info price">价格</div>
+                    <div class="info vip">会员价</div>
+            </div>   
+            <div class="active">
+                <div class="myInfo" id="brand"></div>
+                <div class="myInfo" id="standard"></div>
+                <div class="myInfo" id="count"></div>
+                <div class="myInfo" id="number">
+                    <input type="text" class="input" value="1">
+                    <span class="button">
+                        <span class="up"></span>
+                        <span class="down"></span>
+                    </span>
+                </div>
+                <div class="myInfo price" id="price"></div>
+                <div class="myInfo vip" id="vipPrice"></div>
+            </div> 
+            <div class="buy" id="buy"></div>
+        </div>
+    </div><!--- 商品详情-->
+    <div class="leftDiv">
+        <div class="title">看了又看</div>
+        <div class="slider">
+             <div class="slider-main">
+                <div class="slider-main-img"><a href="#"><img src="../som/commodityInfo/images/1.png" alt=""/></a></div>
+                <div class="slider-main-img"><a href="#"><img src="../som/commodityInfo/images/2.png" alt=""/></a></div>
+                <div class="slider-main-img"><a href="#"><img src="../som/commodityInfo/images/3.png" alt=""/></a></div>
+                <div class="slider-main-img"><a href="#"><img src="../som/commodityInfo/images/4.png" alt=""/></a></div>
+            </div>
+        </div>
+        <div class="slider-ctrl">
+            <span class="slider-ctrl-prev"></span>
+            <span class="slider-ctrl-con current"></span>
+            <span class="slider-ctrl-con"></span>
+            <span class="slider-ctrl-con"></span>
+            <span class="slider-ctrl-con"></span>
+            <span class="slider-ctrl-next"></span>
+        </div>
+    </div>
+</div>
+
+
+    <div class="bottomLine">
+        项目小组：陈垚，曹腾飞，李建刚，武博文，吕思宇，王萌，高子婧
+    </div>
+</body>
+</html>

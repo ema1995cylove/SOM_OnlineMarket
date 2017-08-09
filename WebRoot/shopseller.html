@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./som/seller/css/cssReset.css"/>
+    <link rel="stylesheet" type="text/css" href="./som/seller/css/headTail.css"/>
+    <link rel="stylesheet" type="text/css" href="./som/seller/css/seller.css"/>
+    <script src="som/seller/js/jquery-3.0.0.js"></script>
+</head>
+<body>
+<div class="headList">
+    <div class="headLeft">
+        <p>欢迎~您现在已进入超市个人中心</p>
+    </div>
+    <div class="headRight">
+        <a href="#">首页</a>
+        <a href="#">个人中心</a>
+    </div>
+</div>
+<div class="topLine">
+    <img class="stationLogo" />
+    <div class="search">
+        <form>
+            <label  for="good"/>
+            <input type="text" id="good" class="searchBlock" placeholder="商品搜索"/>
+            <input type="button" class="searchButton">
+        </form>
+    </div>
+</div>
+<div class="line">
+</div>
+<div class="mid">
+    <div class="mid_body">
+        <div class="m_left">
+            <div></div>
+            <ul class="m_ul">
+                <li class="top" style="height: 90px;overflow:hidden;background-color: #FFFFFF;box-shadow: 0 2px 3px silver">
+                    <div class="seller_name">我的SoMarket</div></li>
+                <li class="basic" style="box-shadow: 0 2px 3px rgba(192, 192, 192, 0.69);background-color: #EDE7E1">个人信息</li>
+                <li class="good" style="margin-top: 3px">商品管理</li>
+                <ul class="ul_list">
+                    <li class="select_one" >大分类</li>
+                    <li class="select_two">小分类</li>
+                    <li class="select_three">商品</li>
+                </ul>
+                <li class="controll_order">订单管理</li>
+                <li class="controll_user">会员管理</li>
+                <li class="sell_way">收款方式</li>
+            </ul>
+        </div>
+        <div class="info">
+            <div class="top_right">
+                <div class="top_body">
+                    <div class="top_title">
+                        <div class="info_u">我的超市</div>
+                    </div>
+                    <div class="top_first">
+                        <span>超市logo：</span>
+                        <div class="info_pic">
+
+                        </div>
+                    </div>
+                    <div class="top_mid">
+                        <div class="infoline"> <span>超市名称：</span><div class="s_name"></div></div>
+                        <div class="infoline"> <span>超市地址：</span><div class="s_address"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="first">
+                <div class="first_body">
+                    <div class="first_title">
+                        <div class="info_u">个人信息</div>
+                    </div>
+                    <div class="first_mid">
+                        <div class="first_name">
+                            <div class="first_font"><span style="color: #F10582;font-weight: bold">*</span>已登录帐号：</div>
+                            <div class="market_user"></div>
+                        </div>
+                        <div class="infofirst"> <label>用户生日：</label>
+                            <select id="year"></select><label for="year">年</label>
+                            <select id="month"></select><label for="month">月</label>
+                            <select id="day"></select><label for="day">日</label>
+                            <label class="tip_day" style="color: #F30180;font-size: 13px;display: none">生日未做修改！</label>
+                        </div>
+                        <div class="infofirst"> <label>用户昵称：</label><input id="user_names" disabled >
+                            <label class="change_user_n" >*修改*</label>
+                            <label class="tip_name">昵称未做修改！</label>
+                        </div>
+                        <div class="infofirst"> <label style="float: left">用户密码：</label><div class="btn_pass">*修改*</div></div>
+                        <div class="change_password">
+                            <div class="infopass"> <label>用户原密码：</label>
+                                <input type="password" placeholder="请输入6-20位密码" id="oldPassword">
+                            <div class="minPassword">最少6位密码</div>
+                            <div class="maxPassword">最多20位密码</div>
+                            <div class="errorPassword">原密码错误</div>
+                            </div>
+                            <div class="infopass"> <label>修改密码：</label>
+                                <input type="password" placeholder="请输入6-20位密码" id="newPassword">
+                                <div class="minPassword">最少6位密码</div>
+                                <div class="maxPassword">最多20位密码</div>
+                            </div>
+                            <div class="infopass"> <label>确认密码：</label>
+                                <input type="password" placeholder="请输入6-20位密码" id="repeatPassword">
+                                <div class="minPassword">最少6位密码</div>
+                                <div class="maxPassword">最多20位密码</div>
+                                <div id="differentPassword">与上次输入不一致！</div>
+                            </div>
+                            <div class="sure_or1"> <button class="sure_c1">确认修改</button>
+                                <button class="cancel_c1">取消修改</button></div>
+                        </div>
+                        <div class="first_last">
+                            <button class="first_save">保存</button>
+                            <button class="first_cancel">取消</button>
+                            <button id="soil">取消</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="second">
+                <div class="second_body">
+                    <div class="second_title">大分类</div>
+                    <div class="second_mid">
+                    </div>
+                    <div class="second_bottom">
+                        <div class="add_mod">
+                            <div class="cat_way">
+                                <div class="cat_pic_bottom"></div>
+                                <div class="cat_right_bottom"></div>
+                            </div>
+                            <div class="cat_add">
+                                <div class="add_pic">
+                                    <img src="som/seller/images/add.PNG">
+                                </div>
+                            </div>
+                            <div class="add_bottom">
+                                <div class="add_add">
+                                    添加
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add_category">
+                            <div class="cancel">×</div>
+                            <div class="bottom_font">
+                                    添加大分类
+                            </div>
+                            <div class="bottom_info">
+                                <label>分类名称：</label>
+                                <input id="add_market1">
+                            </div>
+                            <button class="sure_a2">确认添加</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="third">
+                <div class="third_body">
+                    <div class="third_title">小分类</div>
+                    <div class="d_option">
+                        <select id="third_small_category">
+                        </select>
+                    </div>
+                    <div class="third_mid">
+
+                    </div>
+                    <div class="third_bottom">
+                        <div class="add_mod1">
+                            <div class="fam_way">
+                                <div class="fam_pic_bottom"></div>
+                                <div class="fam_right_bottom"></div>
+                            </div>
+                            <div class="fam_add">
+                                <div class="add_pic1">
+                                    <img src="som/seller/images/add.PNG">
+                                </div>
+                            </div>
+                            <div class="add_bottom1">
+                                <div class="add_add1">
+                                    添加
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add_category1">
+                            <div class="cancel1">×</div>
+                            <div class="bottom_font1">
+                                添加小分类
+                            </div>
+                            <div class="bottom_info1">
+                                <label>分类名称：</label>
+                                <input id="add_market2">
+                            </div>
+                            <button class="sure_a3">确认添加</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="four">
+                <div class="four_body">
+                    <div class="four_title">商  品</div>
+                    <div class="d_option">
+                        <select id="four_fi">
+                        </select>
+                        <select id="four_se">
+                        </select>
+                    </div>
+                    <div class="four_mid">
+                    </div>
+                    <div class="four_bottom">
+                        <div class="logo_up">
+                            <!--图片选择对话框-->
+                           <div class="div_img_all">
+                             <div class="div_part">
+                                 <div class="input_part">
+                                     <input id="file1" type="file">
+                                 </div>
+                                 <div class="img_part">
+                                     <img src=""  id="imglist1" alt="">
+                                 </div>
+                             </div>
+                               <div class="div_part">
+                                   <div class="input_part">
+                                       <input id="file2" type="file">
+                                   </div>
+                                   <div class="img_part">
+                                       <img src=""  id="imglist2" alt="">
+                                   </div>
+                               </div>
+                               <div class="div_part">
+                                   <div class="input_part">
+                                       <input id="file3" type="file">
+                                   </div>
+                                   <div class="img_part">
+                                       <img src=""  id="imglist3" alt="">
+                                   </div>
+                               </div>
+                               <div class="div_part" style="border-right: none">
+                                   <div class="input_part">
+                                       <input id="file4" type="file">
+                                   </div>
+                                   <div class="img_part">
+                                       <img src="" id="imglist4" alt="">
+                                   </div>
+                               </div>
+                           </div>
+                            <!--确定上传按钮-->
+                            <input type="button" value="继续" id="btn_Start" />
+                            <span style="font-size: 14px;color: #F10582">
+                                温馨提示：如添加商品成功~图片不可修改哟！</span>
+                        </div>
+                        <div class="f_add">
+                            <div class="font_add">
+                                添加商品
+                            </div>
+                            <div class="four_pic">
+                                <img src="som/seller/images/add.PNG">
+                            </div>
+                            <div class="four_line" >
+                                <div id="four_a">添加</div>
+                            </div>
+                        </div>
+                        <div class="f_right">
+                            <div class="r_font">
+                                <div class="cancel3">×</div>
+                                添加商品信息</div>
+                            <div class="r_info">
+                                <div class="r_line"><label>商品名称:</label><input id="add_good_n">
+                                <div class="add_tip">信息不能为空！</div> </div>
+                                <div class="r_line"><label>品牌:</label><input id="add_good_brand">
+                                    <div class="add_tip">信息不能为空！</div></div>
+                                <div class="r_line"><label>库存:</label><input id="add_good_num">
+                                <div class="add_tip">信息不能为空！</div></div>
+                                <div class="r_line"><label>价格:</label><input id="add_good_price">
+                                <div class="add_tip">信息不能为空！</div></div>
+                                <div class="r_line"><label>vip价格:</label><input id="add_good_v_price">
+                                <div class="add_tip">信息不能为空！</div></div>
+                                <div class="r_line"><label>规格:</label><input id="add_good_standard">
+                                <div class="add_tip">信息不能为空！</div></div>
+                                <div class="r_line"><span>添加商品图片:</span>
+                                    <div class="add_pic_button">*添加图片*</div>
+                                    <div class="add_tip" style="left: 60%">至少添加一张图片！</div>
+                                </div>
+                                <button class="sure_a4">确认添加</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="five">
+                <div class="five_body">
+                    <div class="five_title">
+                        <div class="order_t">全部订单</div>
+                    </div>
+                    <table class="five_tt">
+                        <tr>
+                            <td style="width: 60%">商品</td>
+                            <td style="width: 20%">商品总额</td>
+                            <td style="width: 20%">订单状态</td>
+                        </tr>
+                    </table>
+                    <div class="five_part">
+                    </div>
+
+                </div>
+            </div>
+            <div class="six">
+                <div class="six_t">
+                    <div class="add_in">添加会员信息</div>
+                    <div class="add_info">
+                        <div class="add_line"><label>用户名：</label><input  class="user_addn"></div>
+                        <button class="sure_vip">确认添加</button>
+                    </div>
+                </div>
+                <div class="six_mid">
+                    <div class="sm_font">全部用户</div>
+                    <div class="sm_user">
+                    </div>
+                </div>
+            </div>
+            <div class="seven">
+                <div class="se_body">
+                    <div class="s_title">收款方式</div>
+                    <div class="se_mid">
+                        <div class="bank">
+                            <div class="way">
+                                <div class="w_pic"><img src="som/seller/images/1.PNG"></div>
+                                <div class="w_right">银行卡</div>
+                            </div>
+                            <div class="b_mid" style="margin-top: 15px">储蓄卡</div>
+                            <div class="b_mid">信用卡</div>
+                            <div class="b_bottom"></div>
+                        </div>
+                        <div class="bank">
+                            <div class="way">
+                                <div class="w_pic"><img src="som/seller/images/3.PNG"></div>
+                                <div class="w_right">支付宝</div>
+                            </div>
+                            <div class="b_mid" style="margin-top: 25px">支付宝收款</div>
+                            <div class="b_bottom" style="margin-top: 25px"></div>
+                        </div>
+                        <div class="bank">
+                            <div class="way">
+                                <div class="w_pic"><img src="som/seller/images/2.PNG"></div>
+                                <div class="w_right">微信</div>
+                            </div>
+                            <div class="b_mid" style="margin-top: 25px">微信收款</div>
+                            <div class="b_bottom" style="margin-top: 25px"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="bottomLine">
+    项目小组：陈垚，曹腾飞，李建刚，武博文，吕思宇，王萌，高子婧
+</div>
+</body>
+<script src="som/seller/js/seller.js"></script>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.som.model.LinkMarketAddress" table="som_link_market_address"
+		catalog="som">
+		<id name="marketAddress_id">
+			<column name="address_id" />
+			<generator class="native" />
+		</id>
+
+		<property name="marketAddress_detailed">
+			<column name="address_detailed"></column>
+		</property>
+
+		<one-to-one name="marketBasicInformation" property-ref="market_address"
+			class="com.som.model.MarketBasicInformation"></one-to-one>
+
+		<many-to-one name="marketAddress_province" class="com.som.model.AddressProvince"
+			lazy="false" column="address_province_id" cascade="all" unique="true" />
+		<many-to-one name="marketAddress_contry" class="com.som.model.AddressContry"
+			lazy="false" column="address_contry_id" unique="true" />
+		<many-to-one name="marketAddress_city" class="com.som.model.AddressCity"
+			lazy="false" column="address_city_id" unique="true"></many-to-one>
+
+	</class>
+</hibernate-mapping>

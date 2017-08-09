@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.som.model.UserAccount" table="som_user_account">
+		<id name="accountId" column="account_id" type="integer">
+			<generator class="native"></generator>
+		</id>
+
+		<property name="accountPassword" column="account_password"
+			type="string" />
+		<property name="accountNumber" column="account_number" type="string" />
+		<property name="accountPower" column="account_power" type="integer" />
+
+		<property name="userName" column="user_name" type="string"></property>
+		<property name="userBirthday" column="user_birthday" type="date"></property>
+		<property name="userLogo" column="user_logo" type="string"></property>
+
+		<set name="userCarts" inverse="true" lazy="false" fetch="join"
+			cascade="all" order-by="id asc">
+			<key column="cart_user_id"></key>
+			<one-to-many class="com.som.model.UserCart" />
+		</set>
+		<set name="userAddresses" lazy="false" cascade="all">
+			<key column="user_id"></key>
+			<one-to-many class="com.som.model.LinkUserAddress" />
+		</set>
+		<set name="userOrders" lazy="false" inverse="true" cascade="all">
+			<key column="order_user_id"></key>
+			<one-to-many class="com.som.model.UserOrder" />
+		</set>
+
+		<set name="vipMarket" table="som_link_market_user" inverse="true" lazy="false" cascade="all">
+			<key column="user_id"></key>
+			<many-to-many column="market_id"
+				class="com.som.model.MarketBasicInformation"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

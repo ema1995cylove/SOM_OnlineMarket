@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.som.model.AddressContry" table="som_address_contry"
+		catalog="som">
+		<id name="contry_id" type="java.lang.Integer">
+			<column name="contry_id" />
+			<generator class="native" />
+		</id>
+
+		<property name="contry_name" type="java.lang.String">
+			<column name="contry_name" length="20" not-null="true" />
+		</property>
+
+		<many-to-one name="contry_city" class="com.som.model.AddressCity"
+			not-null="true" lazy="false">
+			<column name="city_id" not-null="true"></column>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

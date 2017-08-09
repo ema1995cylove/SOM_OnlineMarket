@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+
+	<class name="com.som.model.UserOrder" table="som_user_order">
+		<id name="oderId">
+			<column name="order_id"></column>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="orderCode" column="order_number"></property>
+		<property name="orderDate" column="order_date"></property>
+		<property name="orderStatus" column="order_status"></property>
+
+		<many-to-one name="user" class="com.som.model.UserAccount"
+			column="order_user_id" lazy="false" fetch="select"></many-to-one>
+
+		<many-to-one name="marketBaseInfamation" class="com.som.model.MarketBasicInformation"
+			column="order_market_id" lazy="false" fetch="select"></many-to-one>
+
+		<set name="orderDetailed" lazy="false" cascade="all">
+			<key column="order_id"></key>
+			<one-to-many class="com.som.model.UserOrderDetailed" />
+		</set>
+	</class>
+</hibernate-mapping>

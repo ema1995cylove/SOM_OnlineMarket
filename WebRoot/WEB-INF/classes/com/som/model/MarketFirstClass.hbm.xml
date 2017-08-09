@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.som.model.MarketFirstClass" table="som_market_first_class"
+		catalog="som">
+		<id name="first_class_id" type="java.lang.Integer">
+			<column name="first_class_id" />
+			<generator class="native" />
+		</id>
+
+		<property name="first_class_name" type="java.lang.String">
+			<column name="first_class_name"></column>
+		</property>
+
+		<set name="secondClasses" lazy="false" inverse="false" cascade="all">
+			<key>
+				<column name="first_class_id"></column>
+			</key>
+			<one-to-many class="com.som.model.MarketSecondClass" />
+		</set>
+	</class>
+</hibernate-mapping>

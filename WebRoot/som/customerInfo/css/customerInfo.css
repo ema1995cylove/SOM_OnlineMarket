@@ -1,0 +1,348 @@
+.nav{
+width: 100%;
+height: 37px;
+z-index: 1;
+}
+.main{
+    width: 100%;
+    background-color: #EDE7E1;
+    height: 800px;
+    
+}
+li{
+    list-style: none;
+}
+.myContent{
+    width: 78%;
+    margin: 0 auto;
+    padding-top: 20px;
+}  
+.leftTab{
+    width: 18%;
+    background-color:#F8F6F4 ;
+    float: left;
+
+}
+.rightTab{
+    width: 81%;
+    height: 760px;
+    float: left;
+    
+    background-color: #fff;
+    border: 1px solid #DBD6D0; 
+}
+.info{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #DBD6D0;
+    border-bottom-color:#F8F6F4; 
+}
+.info:last-child{
+    border-bottom-color:#DBD6D0;
+}
+.myInfo{
+    width: 68%;
+    position: absolute;
+    display: none;
+    padding-left: 40px;
+    height: 700px;
+    padding-top: 20px;
+}
+.info:hover{
+    background-color: #fff;
+    border-color:#F8F6F4; 
+    cursor: pointer;
+    border-right-color:#fff;
+}
+.icon{ 
+    list-style: none;
+    position: absolute;
+    width: 21px;
+    height: 25px;
+    margin-top: 13px;
+    margin-left: 5px;
+ }
+.baseInfo{
+    list-style: none;
+    position: absolute;
+    margin-top:3.5px;
+    margin-left: -7.5px;
+    width: 39px;
+    height: 55px;
+    background: url(../images/nav_title_bg.png) no-repeat; 
+}
+.address{
+     background: url(../images/left_tab.png) 0 -325px; 
+}
+.order{
+    background: url(../images/left_tab.png) 0 0;
+}
+.passwordIcon{
+    background: url(../images/left_tab.png) 0 -275px;
+}
+.vip{
+    background: url(../images/left_tab.png) 0 -75px;
+}
+.rightTitle{
+    width: 100%;
+    height: 50px;
+
+}
+.header{
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+}
+.header img{
+    width: 120px;
+    height: 120px;
+}
+
+.button{
+    cursor: pointer;
+    width: 93px;
+    height: 33px;
+    position: absolute;
+    left: 26%;
+    top: 15%;
+}
+.changeHeader{ 
+    background:url(../images/update1.png);    
+}
+.changeHeader:hover{
+    background:url(../images/update.png);
+}
+.selectFile{
+    display: none;
+    background:url(../images/file.png);
+}
+.upload{
+    left:40%;
+    display: none;
+    background:url(../images/upload.png);
+}
+.submit{
+    left:20%;
+    top:60%;
+    background:url(../images/submit.png);
+}
+.cancle{
+    width: 93px;
+    height: 33px;
+    left:40%;
+    top:60%;
+    background:url(../images/cancle.png);
+}
+.baseLi{
+    display:inline-block;
+    width:90px;
+    color: #BCBCBC;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+.modity{
+    display:inline-block;
+    margin-left: 10px;
+    color:red;
+    cursor: pointer;
+    width: 300px;
+}
+.name span{
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/icon_bar.png) no-repeat -220px -40px;
+}
+.base input{
+    width: 150px;
+}
+.base select{
+    width: 80px;
+}
+#sex input{
+    width: 50px;
+}
+
+
+
+/* 收货地址css*/
+
+.infoHead{
+    color: #33338C;
+    padding-left: 20px;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border-bottom: 1px solid #DBD6D0;
+}
+.save{
+    width: 93%;
+    height: 45%;
+    margin-top: -18px;
+}
+.divLi{
+    display:inline-block;
+    width:95px;
+    color: #666666;
+    height: 40px;
+    text-align: right;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 5px;
+    line-height: 40px;
+}
+.save span{
+    display: block;
+    height: 30px;
+    font-size: 20px;
+    color: #666666;
+    line-height: 35px;
+    margin-left: 30px;
+    margin-bottom:10px;
+    font-weight: bold;
+    font-family: "宋体";
+}
+.tip{
+    border:1px solid #EFE68B;
+    background-color: #FEFFE5;
+    color: #666666;
+    width: 90%;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+.tip li{
+    color: red;
+    display: inline-block;
+}
+.saveAddress{
+    width: 90%;
+    color: #666666;
+    text-align:center;
+}
+.saveAddress tr{
+    height: 42px;
+}
+.saveAddress td{
+    border:1px solid #DBD6D0;
+}
+#myAddress tr:hover{
+    background-color:#F8F6F4 ;
+}
+.saveAddress a{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.saveAddress a:hover{
+    color: #FF2B2A;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+#receive select{
+    width: 100px;
+    color: #666666;
+}
+#detailAddress{
+    width: 350px;
+    height: 40px;
+    position: relative;
+    top:10px;
+}
+.saveButton{
+    width: 124px;
+    height: 33px;
+    position: relative;
+    left: 500px;
+    top: -5px;
+    background:url(../images/saveAddress.png);
+}
+.saveButton:hover{
+    background:url(../images/saveAddressHover.png);
+}
+ul{
+    display:inline-block; 
+    color: red;
+}
+tbody li {
+    display: inline-block;
+}
+/*---*/
+.filter{
+    width: 720px;
+    height: 50px;
+    
+}
+.filter td{
+    border:1px solid #DBD6D0;
+    border-bottom-width: :1px;
+    text-align: center;
+    background-color: #F8F6F4;
+}
+#box{
+    width: 720px;
+    height: 610px;
+    overflow-y: scroll;
+}
+.orderInfo{
+    width: 700px;
+    border:1px solid #DBD6D0;
+}
+.orderInfo th{
+    border:1px solid #DBD6D0;
+    height: 40px;
+    text-align:center;
+}
+.orderInfo td{
+    border:1px solid #DBD6D0;
+    text-align: center;
+}
+.orderInfo img{
+    width: 25%;
+    height: 60px;
+    margin-left: 10px;
+}
+.orderInfo li{
+    display: inline-block;
+    width: 65%;
+    text-align: left;
+}
+.space{
+    height: 20px;
+    background-color: #F8F6F4;
+    text-align: left;
+}
+.deleteOrder:hover{cursor: pointer;color: red;}
+#changePassword li{
+    display:inline-block;
+    width:95px;
+    color: #666666;
+    height: 40px;
+    text-align: right;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 5px;
+    line-height: 40px;
+}
+#v_container{
+    position: relative;
+    left:340px;
+    top:-35px;
+}
+#changePasswordButton{
+    position: relative;
+    left: 300px;
+    width: 60px;
+    height: 30px;
+    background:url(../images/tijiao.png);
+}
+#changePasswordButton:hover{
+    background:url(../images/tijiaoHover.png);
+}

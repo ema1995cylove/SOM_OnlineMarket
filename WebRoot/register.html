@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<link href="som/zhuce/css/zhuce.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="som/zhuce/css/cssReset.css" />
+<script src="som/zhuce/js/jquery-3.0.0.js"></script>
+<script src="som/zhuce/js/uploadPreview.js" type="text/javascript"></script>
+	<script>
+		window.onload = function () {
+			new uploadPreview({ UpBtn: "up_img", DivShow: "imgdiv", ImgShow: "imgShow" });
+		}
+	</script>
+</head>
+<body>
+	<div class="headList" style="height: 90px;line-height: 90px;">
+		<a href="index.html"><div class="headLeft"></div></a>
+		<div class="headRight">
+			Hi~，欢迎光临 So market！
+			<p style="font-size: 10px;color: #999999;margin-left: 10%">
+				已有账户，<a href="login.html">请登录</a>
+			</p>
+		</div>
+	</div>
+	<div class="mid">
+		<div class="pu_tong">新用户注册</div>
+		<div class="pu_1" >
+			<div class="pu_2" >
+				<form id="register_form" >
+					<div class="hang">
+						<div class="zi">
+							<span class="font">手机号：</span>
+						</div>
+						<input id="shou" type="text" name="accountNumber"
+							   placeholder="请输入11位手机号">
+						<div class="t_jia">请填写手机号！</div>
+					</div>
+					<div class="hang">
+						<div class="zi">
+							<span class="font">密码：</span>
+						</div>
+						<input id="mima" type="password" placeholder="6-20位由数字字母下划线组成的密码">
+						<div class="t_jia">请正确填写密码</div>
+					</div>
+					<div class="hang">
+						<div class="zi">
+							<span class="font">确认密码：</span>
+						</div>
+						<input id="que" type="password" name="accountPassword"
+							   placeholder="请重新输入密码">
+						<div class="t_jia">密码与第一次输入不符！</div>
+					</div>
+					<div class="hang">
+						<div class="zi">
+							<span class="font">验证码：</span>
+						</div>
+						<input class="yan" type="text">
+						<div class="yz"></div>
+						<span class="sp">换一张</span>
+						<div class="t_jia">验证码不能为空</div>
+					</div>
+					<div class="hang">
+						<div class="zi">
+							<span class="font">用户类型：</span>
+						</div>
+						<div class="c_l">
+							<div class="choose">
+								<input type="radio" style="margin-top: 10px" name="accountPower"
+									   checked id="check1" value="0">
+							</div>
+							<label for="check1" style="margin-left: -20px">普通用户</label>
+						</div>
+						<div class="c_r" >
+							<div class="choose">
+								<input type="radio" style="margin-top: 10px" name="accountPower"
+									   id="check2" value="1">
+							</div>
+							<label for="check2" style="margin-left: -50px" id="seller">商 家</label>
+						</div>
+					</div>
+				</form>
+				<form id="market_form" enctype="multipart/form-data">
+					<div id="market">
+						<div class="market_top">
+							<span>超市logo：</span>
+							<div class="market_pic">
+								<div id="imgdiv">
+									<img id="imgShow" width="180" height="180" />
+								</div>
+								<input type="file" id="up_img" name="market_logo"/>
+								<div class="tip_name_top">不能为空！</div>
+							</div>
+						</div>
+						<div class="market_mid">
+							<div class="market_line">
+								<span>超市名称：</span>
+								<div class="mark_in">
+									<input id="market_name" style="float: left" name="market_name">
+									<div class="tip_name">不能为空！</div>
+								</div>
+							</div>
+							<div class="market_line">
+								<span>超市地址：</span>
+								<div class="mark_in">
+									<div class="mark_left" >
+										<select id="province" name="marketAddress_province">
+											<option>&#45;&#45;省&#45;&#45;</option>
+										</select>
+										<label for="province">省</label>
+										<select id="city" name="marketAddress_city">
+											<option>&#45;&#45;市&#45;&#45;</option>
+										</select>
+										<label for="city">市</label>
+										<select id="contries" name="marketAddress_contry">
+											<option>&#45;&#45;区&#45;&#45;</option>
+										</select>
+										<label for="contries">区</label>
+									</div>
+									<div class="mark_right">
+										<input  id="market_id" placeholder="详细地址" name="marketAddress_detailed">
+									</div>
+									<div class="tip_name">不能为空！</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+
+					<div class="hang" style="margin-bottom: 20px">
+						<input id="zh" type="button" value="立 即 注 册">
+					</div>
+				</div>
+
+		</div>
+
+	</div>
+	<div class="bottom">
+		<div class="bottomLine">项目小组：陈垚，曹腾飞，李建刚，武博文，吕思宇，王萌，高子婧</div>
+	</div>
+</body>
+<script src="som/zhuce/js/zhuce.js"></script>
+</html>

@@ -1,0 +1,75 @@
+
+Object {readyState: 4, getResponseHeader: function, getAllResponseHeaders: function, setRequestHeader: function, overrideMimeType: function…}
+abort
+:
+function ( statusText )
+always
+:
+function ()
+catch
+:
+function ( fn )
+done
+:
+function ()
+fail
+:
+function ()
+getAllResponseHeaders
+:
+function ()
+getResponseHeader
+:
+function ( key )
+overrideMimeType
+:
+function ( type )
+pipe
+:
+function ( /* fnDone, fnFail, fnProgress */ )
+progress
+:
+function ()
+promise
+:
+function ( obj )
+readyState
+:
+4
+responseText
+:
+"
+↵<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+↵<html>
+↵<head>
+↵<meta http-equiv="pragma" content="no-cache">
+↵<meta http-equiv="cache-control" content="no-cache">
+↵<meta http-equiv="expires" content="0">
+↵</head>
+↵
+↵<body>
+↵<h1>your page not find(404)</h1>
+↵</body>
+↵</html>
+↵"
+setRequestHeader
+:
+function ( name, value )
+state
+:
+function ()
+status
+:
+404
+statusCode
+:
+function ( map )
+statusText
+:
+"Not Found"
+then
+:
+function ( onFulfilled, onRejected, onProgress )
+__proto__
+:
+Object

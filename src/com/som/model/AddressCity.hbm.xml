@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.som.model.AddressCity" table="som_address_city"
+		catalog="som">
+		<id name="city_id" type="java.lang.Integer">
+			<column name="city_id" />
+			<generator class="native" />
+		</id>
+
+		<property name="city_name" type="java.lang.String">
+			<column name="city_name"></column>
+		</property>
+
+		<many-to-one name="city_province" class="com.som.model.AddressProvince"
+			not-null="true" lazy="false">
+			<column name="province_id" not-null="true"></column>
+		</many-to-one>
+
+		<set name="city_contries" lazy="false" cascade="all">
+			<key>
+				<column name="city_id"></column>
+			</key>
+			<one-to-many class="com.som.model.AddressContry" />
+		</set>
+	</class>
+</hibernate-mapping>

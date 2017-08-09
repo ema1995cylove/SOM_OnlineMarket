@@ -1,0 +1,80 @@
+    body{
+        background: url(../images/03.jpg);
+        background-repeat: no-repeat;
+    }
+     .middleContent{
+        
+        margin: 0 auto;
+        width: 900px;
+        height: 560pxa;
+        border-left: 1px solid #48AAF0;
+        border-right: 1px solid #48AAF0;
+        padding-left: 25px;
+      }
+      .select{
+        width: 100px;
+        margin:10px 50px 10px 0;
+      }
+      .selectDiv{
+        height:50px;
+        padding-left: 50px;
+      }
+      .header{
+        display: block;
+        height: 30px;
+        padding-left: 10px;
+        color: red;
+      }
+      .marketInfo{
+        width:900px;
+        height: 445px;
+      }
+      .marketDiv{
+        height: 200px;
+        width: 210px;
+        float: left;
+        margin:20px 10px 0 0;
+      }
+      .marketLogo{
+        height: 145px;
+        width: 210px;
+      }
+      .turnPage{
+        float: right;
+      }
+      .button{
+        position: relative;
+        float: right;
+        border: 1px solid #0864F0;
+        margin: 5px 10px 0 0;
+        width: 50px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        background:#DDEFF9;
+        border-radius:5px;
+        border-top:1px solid white;
+        border-left:1px solid white;
+        border-right:1px solid #295598;
+        border-bottom:1px solid #295598;
+        color:black;
+      }                                    
+      .btnBkClick{
+        background:#999999;
+        border-radius:5px;
+        border-top:1px solid black;
+        border-left:1px solid black;
+        border-right:1px solid white;
+        border-bottom:1px solid white;
+        color:white;
+      }
+      .btnBkNotUsed{color:white;}     
+      .button:hover{
+        background:#365DB7;
+        cursor: pointer;
+        color: white;
+      }
+      a{
+        text-decoration: none;
+        color:#0F346F;
+      }

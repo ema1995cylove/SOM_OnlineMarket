@@ -1,0 +1,202 @@
+ .mainMiddle{
+    width: 100%;
+    height: 500px;
+}
+.imageInfo{
+    height: 500px;
+    width: 422px;
+    position: relative;
+    left: 180px;
+}
+.bigImgInfo{
+    width: 420px;
+    height: 420px;
+    position: absolute;
+    left: 180px;
+    border: 1px solid #999999;
+}
+.bigbigImg{
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    left: 608px;
+    overflow: hidden;
+    border: 1px solid #999999;
+    display: none;
+    z-index: 10;
+}
+.bigImg{
+    width: 420px;
+    height: 420px;
+}
+.bigest{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.small{
+    width: 420px;
+    height: 60px;
+    position: absolute;
+    left: 180px;
+    top: 620px;
+}
+.smallImg{
+    width: 60px;
+    height: 60px;
+    float: right;
+    margin-left: 20px;
+    margin-right: 20px;     
+}
+.smallImg:hover{
+    border: 2px solid black;
+}
+
+.textInfo{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 650px;
+}
+.headInfo{
+    font-weight: bold;
+    font-size: 23px;
+    width: 500px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.marketName{
+    float: left;
+}
+.commodityName{
+    float: left;
+}
+.fixed{
+    color: #999999;
+    font-size: 19px;
+}
+.info{
+    width: 80px;
+    height: 45px;
+    margin-left: 15px;
+}
+.active{
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+.myInfo{
+    width: 80px;
+    height: 45px;
+    margin-left: 15px;
+    font-size: 19px;
+}
+.input{
+    width: 50px;
+    height: 30px;
+}
+.button{
+    width: 20px;
+    height: 28px;
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 135px;
+}
+.up{
+    display: block;
+    width: 18px;
+    height: 14px;
+    background: url(../images/up.png);
+}
+.down{
+    margin-top: 6px;
+    display: block;
+    width: 18px;
+    height: 14px;
+    background: url(../images/down.png);
+}
+.price{font-size: 20px;}
+#vipPrice{font-size: 22px;}
+.vip{ 
+    font-size: 20px; 
+    font-weight: bold;
+    color: #c81522
+}
+.buy{
+    position: absolute;
+    left: 100px;
+    top: 350px;
+    width: 180px;
+    height: 40px;
+    background: url(../images/basket.png);
+}
+.leftDiv{
+    width: 210px;
+    height: 447px;
+    position: absolute;
+    border: 1px solid #999999;
+    overflow: hidden;
+}
+.title{
+    color: red;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+.slider{
+    width: 210px;
+    height: 430px;
+}
+.slider-main{
+    width: 210px;
+    height:860px;
+}
+.slider-main-img{
+    width: 210px;
+    height: 430px;
+    position: absolute;
+    height: 30px;
+}
+.slider-main-img img{
+    width: 210px;
+    height: 430px;
+}
+.slider-ctrl{
+	position:absolute;
+    top:430px; 
+    width: 210px;
+    text-align: center;
+}
+.slider-ctrl-con {
+    width: 24px;
+    height: 20px;
+    display:inline-block;
+    background:url(../images/icon.png) no-repeat -24px -782px;
+    margin: 0 5px;
+    cursor: pointer;
+    text-indent: -20em;
+}
+.current {
+    background-position: -24px -762px;
+}
+.slider-ctrl-prev{
+    width: 37px;
+    height: 38px;
+    background:url(../images/pre.png);
+    position: absolute;
+    top: -398px;
+    left: 86px;
+    opacity: 0.2;
+}
+.slider-ctrl-next{
+    width: 37px;
+    height: 38px;
+    background:url(../images/next.png);
+    position: absolute;
+    top: -35px;
+    left: 86px;
+    opacity: 0.2;
+}
+.slider-ctrl-next:hover{ opacity: 0.3;}
+.slider-ctrl-prev:hover{ opacity: 0.3;}

@@ -1,0 +1,68 @@
+ body{ font-family:"宋体";}
+.headList{width: 100%;height: 35px;background: gainsboro; }
+.headList a{text-decoration: none;color: gray;float: left;}
+.headList a:hover{color: orangered;}
+.headLeft{line-height: 35px;float: left;font-size: 13px;}
+.headLeft p{float: left;margin-left: 135px;}
+.headLeft a{margin-left: 10px;}
+.headRight{float: left;  line-height: 35px;  font-size: 13px;  margin-left: 600px;}
+.headRight ul li{list-style-type: none;float: left;margin-left: 20px;}
+
+.topLine{width: 85%;margin: auto;height: 200px;}
+.stationLogo{
+    width: 200px;
+    height: 150px;
+    background: orange;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;}
+.search{
+    position: relative;
+    top: 10px;
+    left:50px;
+    margin-left:40px;
+    margin-top:10px;
+    float: left;
+}
+.searchBlock{
+    width: 400px;
+    height: 35px;
+    border: solid 3px red;
+}
+.searchButton{
+    margin-left: -10px;
+    width:70px;
+    height: 41px;
+    background: red;
+    border: solid 1px red;
+}
+.search img{
+    position:absolute;
+    top:13px;
+    left:375px;
+}
+.middleLine{width: 85%;height: 500px;background: lightskyblue;margin: auto;}
+.bottomLine{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+    /*background:gainsboro;*/
+    line-height: 70px;
+    text-align: center;
+    font-size: 15px;
+    color:#fff;
+    background-color: #E3F5FF;
+    background: url(../images/paint.png) repeat,gainsboro;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation-name: bottomLine-animation;
+    -webkit-animation-duration: 40s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transition: color .6s linear;
+    }
+    @-webkit-keyframes bottomLine-animation {
+    0% {background-position: left bottom;}
+    100% {background-position: right bottom;}
+}
